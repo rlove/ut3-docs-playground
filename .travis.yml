@@ -2,4 +2,4 @@ sudo:  required
 dist:  trusty 
 language: bash
  
-install: pip install -r .travis/python_req.txt 
+install: sudo pip install -r .travis/python_req.txt 
