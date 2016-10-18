@@ -6,7 +6,7 @@ install:
   - sudo pip install -r .travis/python_req.txt 
 
 script:
-  - .travis/build_docs.sh
+  - bash .travis/build_docs.sh
 
 notifications:
   email: false
