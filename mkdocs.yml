@@ -1,0 +1,12 @@
+site_name: utPLSQL
+site_description: utPLSQL Documenation Powerful Unit Testing Framework for Oracle PL/SQL
+copyright: Copyright &copy; 2016 - utPLSQL Team
+repo_url: https://github.com/utplsql/utplsql/
+pages:
+  - Home: index.md
+  - User Guide:
+       - Annotations: annotations.md
+       - Getting Started: getting-started.md
+       - Support: support.md
+  - About: about.md     
+    Contributing: ../contributing.md
