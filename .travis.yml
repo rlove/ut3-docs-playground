@@ -3,3 +3,6 @@ dist:  trusty
 language: bash
  
 install: sudo pip install -r .travis/python_req.txt 
+
+notifications:
+  email: false
