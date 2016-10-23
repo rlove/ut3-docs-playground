@@ -115,7 +115,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR} > /dev/null 2> /dev/null
   ENCRYPTED_IV=${!ENCRYPTED_IV_VAR} > /dev/null 2> /dev/null
   openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../.travis/deploy_key.enc -out  ../.travis/deploy_key -d > /dev/null 2> /dev/null
-  chmod 600 deploy_key
+  chmod 600 ../.travis/deploy_key
   eval `ssh-agent -s`
   ssh-add ../.travis/deploy_key  
   
