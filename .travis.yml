@@ -2,6 +2,7 @@ sudo:  required
 language: python
 
 env:
+ global:
   # Target Branch and Directory for Deployment of Pages
   - PAGES_TARGET_BRANCH="gh-pages"   
   - PAGES_VERSION_BASE="version3"
