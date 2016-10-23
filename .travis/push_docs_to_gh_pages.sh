@@ -54,6 +54,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   if [ -n "$PAGES_BRANCH_EXISTS" ] ; then
     echo "Pages Branch Found"
     echo "-$PAGES_BRANCH_EXISTS-"
+    git remote set-branches origin  $PAGES_TARGET_BRANCH
     git fetch --depth 1 origin $PAGES_TARGET_BRANCH 
     git checkout $PAGES_TARGET_BRANCH  
   else
