@@ -1,12 +1,17 @@
 sudo:  required 
-dist:  trusty 
-language: bash
- 
+language: python
+
+env:
+  # Target Branch and Directory for Deployment of Pages
+  - PAGES_TARGET_BRANCH="gh-pages"   
+  - PAGES_VERSION_BASE="version3"
+  
 install: 
   - sudo pip install -r .travis/python_req.txt 
 
 script:
   - bash .travis/build_docs.sh
+  - bash .travis/push_docs_to_gh_pages.sh
 
 notifications:
   email: false
