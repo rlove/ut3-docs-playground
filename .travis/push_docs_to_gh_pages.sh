@@ -109,15 +109,15 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git commit -m "Deploy to GitHub Pages: ${SHA}"
   
   #unencrypt and configure deployment key
-  [[ -e .travis/deploy_key.enc ]] || { echo ".travis/deploy_key.enc file not found";  exit 1; }
+  [[ -e ../.travis/deploy_key.enc ]] || { echo ".travis/deploy_key.enc file not found";  exit 1; }
   ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
   ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
   ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR} > /dev/null 2> /dev/null
   ENCRYPTED_IV=${!ENCRYPTED_IV_VAR} > /dev/null 2> /dev/null
-  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in .travis/deploy_key.enc -out  .travis/deploy_key -d > /dev/null 2> /dev/null
+  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../.travis/deploy_key.enc -out  ../.travis/deploy_key -d > /dev/null 2> /dev/null
   chmod 600 deploy_key
   eval `ssh-agent -s`
-  ssh-add .travis/deploy_key  
+  ssh-add ../.travis/deploy_key  
   
   # Now that we're all set up, we can push.
   git push $SSH_REPO $TARGET_BRANCH    
