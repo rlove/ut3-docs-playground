@@ -75,9 +75,9 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     cp -a ../site/. $PAGES_VERSION_BASE/$TRAVIS_TAG 
   fi
  
-  #Check if there are doc changes.
+  #Check if there are doc changes, if none exit the script
   if [[ -z `git diff --exit-code` ]] && [ -n "$PAGES_BRANCH_EXISTS" ] ; then
-    echo "No changes to the output on this push; exiting."
+    echo "No changes to docs detected."
     exit 0
   fi
 
