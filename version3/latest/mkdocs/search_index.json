@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Example index.md\n\n\nutPLSQL Home / index page", 
+            "text": "Example index.md\n\n\nutPLSQL Home / index page\n\n\nHow to install \nUser Guide", 
             "title": "Home"
         }, 
         {
             "location": "/#example-indexmd", 
-            "text": "utPLSQL Home / index page", 
+            "text": "utPLSQL Home / index page  How to install  User Guide", 
             "title": "Example index.md"
         }, 
         {
