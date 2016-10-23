@@ -120,6 +120,6 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   ssh-add ../.travis/deploy_key  
   
   # Now that we're all set up, we can push.
-  echo "git push $SSH_REPO $TARGET_BRANCH"
-  git push $SSH_REPO $TARGET_BRANCH    
+  echo "git push $SSH_REPO $PAGES_TARGET_BRANCH"
+  git push $SSH_REPO $PAGES_TARGET_BRANCH    
 fi
